@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+<div class="parent">
+    <div class="div1">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="div2">
+        <ul>
+            <li><button onclick="myFunction('cakes')">CAKES</button></li><br><hr>
+            <li><button onclick="myFunction('foods')">FOODS</button></li><br><hr>
+            <li><button onclick="myFunction('drinks')">DRINKS</button></li>
+        </ul>
+    </div>
+    <div class="div3">
+        <div id="cakes" class="meals">
+            <p>CAKES</p>
+            <table>
+                <tr>
+                    
+                    <th>photo</th>
+                    <th>Cake type</th>
+                    <th>Flavour</th>
+                    <th>Delivery place</th>
+                    <th>price</th>
+
+                </tr>
+                <tr>
+                    <td><img src="images/chocolate cake.jpg" style="height: 100px;"width: 100px; ></td>
+                    <td>Chocolate cake</td>
+                    <td>Chocolate</td>
+                    <td>Tudor</td>
+                    <td>2500/=</td>
+                </tr>
+                <tr>
+                    <td><img src="images/vanilla cake.jpg " style="height: 100px;"width: 100px; ></td>
+                    <td>Vanilla cake</td>
+                    <td>Vanilla </td>
+                    <td>Mikindani</td>
+                    <td>2300/=</td>
+                </tr>
+                <tr>
+                    <td><img src="images/marble cake.jpg " style="height: 100px;"width: 100px; ></td>
+                    <td>Marble cake</td>
+                    <td>Chocolate/vanilla</td>
+                    <td>Jomvu</td>
+                    <td>2200/=</td>
+                </tr>
+                <tr>
+                    <td><img src="images/strawberry cake.jpg " style="height: 100px;"width: 100px; ></td>
+                    <td>Strawberry cake</td>
+                    <td>Strawberry</td>
+                    <td>Miritini</td>
+                    <td>2200/=</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="foods" class="meals">
+            <p>FOODS</p>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Food</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td> <img src="images/Rice.webp" style="height: 100px;" width: 100px;></td>
+                    <td>Rice</td>
+                    <td>Main food</td>
+                    <td>100/=</td>
+                </tr>
+                <tr>
+                    <td> <img src="images/chapati.webp" style="height: 100px;" width: 100px;></td>
+                    <td>Chapati</td>
+                    <td>Main food</td>
+                    <td>50/=</td>
+                </tr>
+                <tr>
+                    <td> <img src="images/beans.jpg" style="height: 100px;" width: 100px;></td>
+                    <td>Beans</td>
+                    <td>Side dish</td>
+                    <td>80/=</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="drinks" class="meals">
+            <p>DRINKS</p>
+            <table>
+                <tr>
+                    <th>Photo</th>
+                    <th>Drink</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td> <img src="images/soda.jpg" style="height: 100px;" width: 100px;></td>
+                    <td>Soda</td>
+                    <td>Soft drink</td>
+                    <td>70/=</td>
+                </tr>
+                <tr>
+                    <td> <img src="images/juice.avif" style="height: 100px;" width: 100px;></td>
+                    <td>Juice</td>
+                    <td>Fruit drink</td>
+                    <td>100/=</td>
+                </tr>
+                <tr>
+                    <td> <img src="images/water.avif" style="height: 100px;" width: 100px;></td>
+                    <td>Water</td>
+                    <td>Beverage</td>
+                    <td>50/=</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
+    <script>
+        function myFunction(categoryId) {
+        //get all categories
+        let categories=
+        document.querySelectorAll(".meals");
+        //hide all categories
+        categories.forEach(function(meals){
+            meals.classList.remove("active");
+            });
+            //show selected category
+            document
+                .getElementById(categoryId)
+                .classList.add("active");
+        }
+        //show food when page loads
+        window.onload=function(){
+            myFunction('cakes');
+        };
+    </script>
+</body>
+</html>
